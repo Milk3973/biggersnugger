@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/login.css">
+  <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <httpProtocol>
+  <customHeaders>
+    <add name="X-Frame-Options" value="allow-from https://87556--mrkitzomy.repl.co/" />
+  </customHeaders>
+</httpProtocol>
+  <title><%=title%></title>
+</head>
+<body>
+  <div class="main-content">
+      <div class="title">
+        <h1>Radiance</h1>
+        <h2 class='err'><%=err_msg%></h2>
+      </div>
+      <div class="login-form">
+        <form action='/login' method='POST'>
+          <h2>Login</h2>
+          <div class='username'>
+            <i class="fa fa-user icon"></i>
+            <input type='text' name='username' class='username_input' type="text" placeholder='Username'>
+          </div>
+          <div class='password'>
+            <i class="fa-solid fa-lock"></i>
+            <input type='password' name='password' class='password_input' type="text" placeholder='Password'>
+          </div>
+          <input class='submitBtn' type="submit" value='Login'>
+        </form>
+      </div>
+  </div>
+  <footer>
+      <div class="copyright"></div>
+      <div class="footer-links">
+          <a href="#">Sup Brah</a> 
+      </div>
+  </footer>
+
+  <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    var h2 = $('.err');
+    console.log(h2.text())
+    var err_msg = ''
+    if (h2.text() === 'Username or Password is Incorrect!') {
+      err_msg = h2.text();
+      console.log(err_msg)
+      Toastify({
+      text: err_msg,
+      duration: 5000,
+      destination: "",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "#a55658",
+      },
+      onClick: function(){} // Callback after click
+    }).showToast();
+    }
+  </script>
+<!--   <script src='../js/toastify.js'></script> -->
+  <script src="../js/copyright.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "model/user.js": [
+      {
+        "id": "e01b69f8-db73-4c23-b828-32b8245a6d69",
+        "line": 5,
+        "version": 1,
+        "index": 114
+      }
+    ],
+    "public/css/wr/base.css": [
+      {
+        "id": "6b284e80-9264-444e-86a6-b11b02b1994c",
+        "line": 62,
+        "version": 1,
+        "index": 1438
+      }
+    ]
+  }
+}
